@@ -34,7 +34,6 @@
 /**
  *  Default styles for xterm.js
  */
-
 .xterm {
     cursor: text;
     position: relative;
@@ -206,4 +205,49 @@
 .xterm-decoration-top {
     z-index: 2;
     position: relative;
+}
+/* custom css */
+h1{
+    color: #7C4585;
+    text-align: center;
+    font-size: 40px;
+    margin: 10px 30px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.601);
+}
+#toggle-theme{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent !important;
+    border: 1px solid #7C4585;
+    border-radius: 5px; 
+    margin: 30px;
+}
+#run{
+    background-color: #7C4585;
+    font-weight:600;
+    color: white;
+    border: none;
+    padding: 8px 13px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.editor-title{
+    color: #7C4585;
+    font-size: 20px;
+    margin: 10px 30px;
+}
+#code{
+    border: 2px solid #7C4585;
+}
+.CodeMirror {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #7d458566;
+}
+#stdin{
+    border: 1px solid #7C4585;
+    background-color: transparent;
 }
