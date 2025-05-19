@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mini Code Editor</title>
+    <!-- Use only one xterm CSS, CDN preferred unless you have custom styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/dracula.min.css" />
+    <style>
+      body { font-family: sans-serif; margin: 2rem; }
+      #editor { height: 300px; border: 1px solid #ccc; }
+      #terminal { height: 200px; margin-top: 1rem; }
+      body.dark-mode {
+             background: #181818;
+        color: #eee;
+      }
+      body.dark-mode #editor {
+         border-color: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mini Code Editor</h1>
+    <button id="toggle-theme">Toggle Dark/Light Mode</button>
+    <textarea id="code" name="code"></textarea><br />
+    <textarea id="stdin" placeholder="Input here..." rows="2" style="width: 100%"></textarea>
+    <button id="run">Run</button>
+    <div id="terminal"></div>
+
+    <!-- Scripts: only one of each, in this order -->
+    <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/python/python.min.js"></script>
+    <script src="{% static 'js/editor.js' %}"></script>
+  </body>
+</html>
