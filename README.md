@@ -30,7 +30,7 @@ Users can write Python code, provide input, and execute the code securely (optio
 ### 1. Clone the Repository
 
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/shubham032/mini_editor.git
 cd mini_editor
 ```
 
